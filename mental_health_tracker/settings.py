@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j&0$e(2^o_p_0nf($91x7mt3qs-kkln*qv!+c5#h+8o69&t%ok
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "serafina-nala-mentalhealthtracker.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://serafina-nala-mentalhealthtrackernew.pbp.cs.ui.ac.id", "http://serafina-nala-mentalhealthtrackernew.pbp.cs.ui.ac.id" ]
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mental_health_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +122,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://serafina-nala-mentalhealthtrackernew.pbp.cs.ui.ac.id/", "https://serafina-nala-mentalhealthtrackernew.pbp.cs.ui.ac.id/"]

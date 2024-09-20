@@ -6,8 +6,9 @@ from django.contrib.auth.models import User
 
 class MainTest(TestCase):
 
+    # created test user for working tests
     def setUp(self):
-        self.user = User.objects.create_user(username='nagi', password='bluelock13') # create user
+        self.user = User.objects.create_user(username='nagi', password='bluelock13')
         self.client = Client()  # changed Client()
         self.client.login(username='nagi', password='bluelock13') 
         self.client.cookies['last_login'] = '2024-10-20T11:21:45' 

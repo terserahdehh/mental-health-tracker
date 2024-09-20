@@ -20,7 +20,7 @@ def show_main(request):
         'class': 'PBP KKI',
         'npm': '2306173435',
         'mood_entries': mood_entries,
-        'last_login': request.COOKIES['last_login'],
+        'last_login': request.COOKIES.get('last_login', 'default_value'),
     }
 
     return render(request, "main.html", context)
